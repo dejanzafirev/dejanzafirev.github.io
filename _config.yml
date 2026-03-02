@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Dejan Zafirev"
 title_separator          : "-"
 name                     : &name "Dejan Zafirev"
@@ -18,20 +18,20 @@ baseurl                  : ""
 repository: "dejanzafirev/dejanzafirev.github.io"
 
 author:
-  avatar           : "pic.png"          
+  avatar           : "pic.JPG"          
   name             : "Dejan Zafirev"
   pronouns         :
   bio              : "PhD Student and Research Assistant (Financial Economics) at the University of Liechtenstein."
   location         : "Vaduz, Liechtenstein"
   employer         : "University of Liechtenstein"
-  uri              : "https://dejanzafirev.github.io"
+  uri              : 
   email            : "dejan.zafirev@uni.li"
 
   # Academic websites
-  googlescholar    : ""                     # paste if you have one
-  orcid            : ""                     # paste if you have one
-  ssrn             : ""                     # optional
-  researchgate     : ""                     # optional
+  #googlescholar    : ""                     # paste if you have one
+  #orcid            : ""                     # paste if you have one
+  #ssrn             : ""                     # optional
+  #researchgate     : ""                     # optional
 
   # Repositories and software development
   github           : "dejanzafirev"

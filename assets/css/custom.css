@@ -1,0 +1,54 @@
+.author__avatar img {
+    border-radius: 50% !important;
+    object-fit: cover;
+}
+.academic-button {
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #ddd !important;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.academic-button:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+.masthead__menu-item.tail {
+  margin-left: 8px;
+}
+
+.no-greedy-nav .visible-links {
+  display: flex;
+  flex-wrap: wrap;        /* wraps instead of hamburger */
+  align-items: center;
+  gap: 8px;
+}
+
+/* Make the top nav a flex row */
+.no-greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Push the button + toggle to the far right */
+.no-greedy-nav .visible-links li:nth-last-child(2) {
+  margin-left: auto;   /* Academic Profile gets pushed right */
+}
+
+/* Keep header links from turning browser-default blue */
+.masthead a,
+.masthead a:visited {
+  color: inherit !important;
+  text-decoration: none;
+}
+.masthead a:hover {
+  text-decoration: underline;
+}
