@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "csv"
+
 group :jekyll_plugins do
   gem 'jekyll'
   gem 'jekyll-feed'
@@ -7,7 +9,6 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jemoji'
   gem 'webrick', '~> 1.8'
- gem "csv"
 end
 
 gem 'github-pages'
