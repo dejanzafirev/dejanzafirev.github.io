@@ -1,8 +1,18 @@
-.author__avatar img {
-  width: 220px !important;   /* change size here */
-  height: 220px !important;  /* force square */
-  object-fit: cover;         /* prevents stretching */
-  border-radius: 12px !important;  /* square with soft corners */
+/* Force avatar to be square - overrides theme */
+.sidebar .author__avatar img.author__avatar,
+.author__avatar img.author__avatar {
+  width: 220px !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;     /* 0 = square, 12px = slightly rounded */
+  max-width: none !important;
+}
+
+/* Also remove any rounding on the container */
+.sidebar .author__avatar,
+.author__avatar {
+  border-radius: 0 !important;
+  overflow: hidden !important;
 }
 .academic-button {
   background-color: transparent;
@@ -53,4 +63,22 @@
 }
 .masthead a:hover {
   text-decoration: underline;
+}
+
+/* Header layout */
+.masthead__inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Push nav to right */
+.masthead__menu {
+  margin-left: auto;
+}
+
+/* Make site title more prominent */
+.masthead__menu-item--lg a {
+  font-weight: 600;
+  font-size: 1.2rem;
 }

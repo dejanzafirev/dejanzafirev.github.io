@@ -1,64 +1,59 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+## Current Position
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+**Research Assistant in Financial Economics**  
+University of Liechtenstein  
+Since July 2025  
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+Contributing to departmental research projects and supporting academic activities.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+---
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Research Interests
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+Asset Pricing  
+Financial Markets  
+Uncertainty and Risk  
+
+---
+
+## Education
+
+**Doctoral Student in Business Economics** (Focus: Financial Economics)  
+University of Liechtenstein, Liechtenstein  
+Since 2025  
+
+**M.Sc. in Economics** (Specialization: Finance)  
+University of Freiburg, Germany  
+2022 – 2024  
+
+**B.Sc. in Economics**  
+University of Ss. Cyril and Methodius, North Macedonia  
+2018 – 2022  
+
+---
+
+## Research
+
+**Populism and Financial Markets: Forward-Looking Insights from Option-Implied Measures**  
+November 2025 – October 2026  
+
+Working paper in progress.
+
+---
+
+## Professional Experience
+
+**Research Assistant in Financial Economics**  
+University of Liechtenstein  
+Since July 2025  
+
+**Intern, Trading Product Control**  
+UniCredit Bank, Munich, Germany  
+2024 – 2025  
