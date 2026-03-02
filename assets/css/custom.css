@@ -1,19 +1,10 @@
-/* Force avatar to be square - overrides theme */
-.sidebar .author__avatar img.author__avatar,
-.author__avatar img.author__avatar {
-  width: 220px !important;
-  height: 220px !important;
-  object-fit: cover !important;
-  border-radius: 0 !important;     /* 0 = square, 12px = slightly rounded */
-  max-width: none !important;
+/* Avatar: square-ish (use 0px for perfectly square corners) */
+.author__avatar img {
+  border-radius: 6px !important;
+  object-fit: cover;
 }
 
-/* Also remove any rounding on the container */
-.sidebar .author__avatar,
-.author__avatar {
-  border-radius: 0 !important;
-  overflow: hidden !important;
-}
+/* Academic Profile button */
 .academic-button {
   background-color: transparent;
   border: 1px solid #888;
@@ -23,39 +14,40 @@
   border-radius: 4px;
   transition: all 0.2s ease;
 }
-
 .academic-button:hover {
   background-color: #fff;
   color: #000 !important;
 }
-.masthead__menu-item.tail {
-  margin-left: 8px;
-}
 
-.no-greedy-nav .visible-links {
-  display: flex;
-  flex-wrap: wrap;        /* wraps instead of hamburger */
-  align-items: center;
-  gap: 8px;
-}
-
-/* Make the top nav a flex row */
+/* Header row layout */
 .no-greedy-nav .visible-links {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 12px;
+  gap: 14px;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: nowrap; /* keep it on one line */
 }
 
-/* Push the button + toggle to the far right */
-.no-greedy-nav .visible-links li:nth-last-child(2) {
-  margin-left: auto;   /* Academic Profile gets pushed right */
+/* Name on the left */
+.site-title {
+  font-weight: 600;
+  margin-right: 10px;
 }
 
-/* Keep header links from turning browser-default blue */
+/* Home / CV / Projects close to the name */
+.nav-link {
+  margin: 0;
+}
+
+/* Push Academic Profile + toggle to the far right */
+.nav-right {
+  margin-left: auto;
+}
+
+/* Prevent browser default blue */
 .masthead a,
 .masthead a:visited {
   color: inherit !important;
@@ -63,22 +55,4 @@
 }
 .masthead a:hover {
   text-decoration: underline;
-}
-
-/* Header layout */
-.masthead__inner-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Push nav to right */
-.masthead__menu {
-  margin-left: auto;
-}
-
-/* Make site title more prominent */
-.masthead__menu-item--lg a {
-  font-weight: 600;
-  font-size: 1.2rem;
 }

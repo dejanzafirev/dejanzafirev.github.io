@@ -5,40 +5,39 @@
       <nav id="site-nav" class="no-greedy-nav">
         <ul class="visible-links">
 
-          <!-- Site title on the LEFT -->
-          <li class="masthead__menu-item masthead__menu-item--lg">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
+  <!-- Site name (left) -->
+  <li class="masthead__menu-item masthead__menu-item--lg site-title">
+    <span>{{ site.title }}</span>
+  </li>
 
-          <!-- Menu links -->
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item persist">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
+  <!-- Nav links (close to the name) -->
+  {% for link in site.data.navigation.main %}
+    {% if link.url contains 'http' %}
+      {% assign domain = '' %}
+    {% else %}
+      {% assign domain = base_path %}
+    {% endif %}
+    <li class="masthead__menu-item nav-link">
+      <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+    </li>
+  {% endfor %}
 
-          <!-- Academic Profile button -->
-          <li class="masthead__menu-item persist tail">
-            <a href="https://www.uni.li/en/dejan.zafirev"
-               target="_blank" rel="noopener"
-               class="academic-button">
-              Academic Profile
-            </a>
-          </li>
+  <!-- Push everything after this to the far right -->
+  <li class="masthead__menu-item nav-right">
+    <a href="https://www.uni.li/en/dejan.zafirev"
+       target="_blank" rel="noopener"
+       class="academic-button">
+      Academic Profile
+    </a>
+  </li>
 
-          <!-- Theme toggle -->
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-label="Toggle theme">
-              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="toggle theme"></i>
-            </a>
-          </li>
+  <li id="theme-toggle" class="masthead__menu-item">
+    <a role="button" aria-labelledby="theme-icon">
+      <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="toggle theme"></i>
+    </a>
+  </li>
 
-        </ul>
+</ul>
       </nav>
     </div>
   </div>
