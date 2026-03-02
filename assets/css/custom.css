@@ -1,6 +1,8 @@
 .author__avatar img {
-    border-radius: 50% !important;
-    object-fit: cover;
+  width: 220px !important;   /* change size here */
+  height: 220px !important;  /* force square */
+  object-fit: cover;         /* prevents stretching */
+  border-radius: 12px !important;  /* square with soft corners */
 }
 .academic-button {
   background-color: transparent;
