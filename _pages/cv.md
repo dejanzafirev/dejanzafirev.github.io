@@ -2,7 +2,7 @@
 layout: single
 title: "CV"
 permalink: /cv/
-author_profile: false
+author_profile: true
 ---
 
 ## Current Position
