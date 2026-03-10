@@ -11,7 +11,7 @@ author_profile: true
 University of Liechtenstein  
 Since July 2025  
 
-Contributing to departmental research projects and supporting academic activities.
+Contributing to department's research and teaching activities.
 
 ---
 
@@ -41,8 +41,7 @@ University of Ss. Cyril and Methodius, North Macedonia
 
 ## Research
 
-**Populism and Financial Markets: Forward-Looking Insights from Option-Implied Measures**  
-November 2025 – October 2026  
+**Populism and Financial Markets**   
 
 Working paper in progress.
 
