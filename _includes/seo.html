@@ -144,4 +144,24 @@
 {% elsif page.header.overlay_image %}
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% endif %}
+
+{% if site.author.name %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author.name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "image": {{ site.author.avatar | prepend: "/images/" | prepend: base_path | jsonify }},
+  "email": {{ site.author.email | prepend: "mailto:" | jsonify }},
+  "jobTitle": {{ site.author.bio | jsonify }},
+  "affiliation": {
+    "@type": "Organization",
+    "name": {{ site.author.employer | jsonify }}
+  },
+  "sameAs": {{ site.social.links | default: site.social | jsonify }}
+}
+</script>
+{% endif %}
+
 <!-- end Open Graph protocol -->
