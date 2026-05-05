@@ -18,7 +18,7 @@ Dejan Zafirev — PhD Student & Research Assistant, University of Liechtenstein
 
 ## Academic profile
 
-I am a doctoral researcher in financial economics with training in quantitative finance and applied econometrics. My work focuses on asset pricing, the effects of political uncertainty on financial markets, and empirical option-pricing models. I use Python, econometric methods, and computational tools to produce reproducible empirical research.
+I am a doctoral researcher in financial economics with training in quantitative finance and applied econometrics. My work focuses on asset pricing, the effects of political uncertainty on financial markets, and empirical option-pricing models. I use R, Python, econometric methods, and computational tools to produce reproducible empirical research.
 
 ---
 
@@ -60,7 +60,7 @@ July 2025 — present
 2018 — 2022
 
 ---
-
+<!--
 ## Research (selected)
 
 - Populism and Financial Markets — working paper in progress (empirical analysis of political uncertainty and asset returns).
@@ -80,6 +80,7 @@ July 2025 — present
 - Talks and conference presentations will be recorded on the Talks page (title, venue, date, slides where available).
 
 ---
+-->
 
 ## Professional experience
 
@@ -87,7 +88,7 @@ July 2025 — present
 
 Nov 2024 — May 2025
 
-- Performed daily P&L decomposition for Equity and FICC desks, reconciled discrepancies and automated reporting workflows with VBA.
+- Analyzed daily P&L decomposition for Equity and FICC desks, reconciled discrepancies and automated reporting workflows with VBA.
 - Collaborated with traders and risk teams to validate valuations and controls.
 
 **Project Leader — Erasmus+ Remote Internship (CIVITTA, Estonia)**
@@ -106,8 +107,8 @@ Jul 2021 — Aug 2021
 
 ## Technical skills
 
-- Programming: Python (Pandas, NumPy, SciPy, Matplotlib), R, SQL, VBA, LaTeX
-- Tools: Jupyter, Git/GitHub, Excel (advanced), PyCharm
+- Programming: Python (Pandas, NumPy, SciPy, Matplotlib), R, VBA
+- Tools: LateX, Git/GitHub, Excel, PyCharm, VS Code
 - Data & reproducibility: pandas, notebooks, scripted pipelines
 
 ---
@@ -117,16 +118,7 @@ Jul 2021 — Aug 2021
 - Macedonian: native
 - English: C1 (advanced)
 - German: B1 (intermediate)
-- Croatian: B1
 
 ---
 
-## Certificates
 
-- Applied Data Science Lab — WorldQuant University (Apr 2025)
-
----
-
-## Notes
-
-This CV is intended for the academic website. For a printable PDF CV or LaTeX source, see the repository (or request a PDF and I can generate one).
