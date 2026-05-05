@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Dejan Zafirev"
+title                    : "Dejan Zafirev | Financial Economics PhD"
 title_separator          : "-"
 name                     : &name "Dejan Zafirev"
-description              : &description "Personal academic website of Dejan Zafirev (finance / financial economics)."   
+description              : &description "Dejan Zafirev — PhD student and Research Assistant in Financial Economics at the University of Liechtenstein. Research on asset pricing, political risk, and financial markets."  
 url: "https://dejanzafirev.github.io"                                                    
 baseurl                  : "" 
 repository: "dejanzafirev/dejanzafirev.github.io"
