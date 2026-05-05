@@ -11,17 +11,14 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Working papers"
+    url: /working-papers/
 
   - title: "Teaching"
     url: /teaching/
 
   - title: "Talks"
     url: /talks/
-
-  - title: "Portfolio"
-    url: /portfolio/
 
   - title: "CV"
     url: /cv/

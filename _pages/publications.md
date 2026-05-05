@@ -1,8 +1,9 @@
 ---
 layout: single
-title: "Publications"
-permalink: /publications/
+title: "Working papers"
+permalink: /working-papers/
 author_profile: true
 ---
 
-A curated list of my publications, preprints, and working papers. Papers include links to PDFs and arXiv when available; new work (e.g., forthcoming working papers) will be added here.
+A curated list of my working papers and preprints (including arXiv links when available). I'll add PDFs, abstracts, and links to code/notebooks as work becomes available.
+
