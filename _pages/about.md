@@ -6,14 +6,31 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
 # Dejan Zafirev
 
-PhD Student in Financial Economics at the University of Liechtenstein.
+PhD Student and Research Assistant in Financial Economics  
+University of Liechtenstein  
+Contact: dejan.zafirev[at]uni.li
+
+---
+
+## Research
 
 I study how financial markets react to political and macroeconomic shocks.
 
-My research interests include empirical asset pricing, derivatives and option markets, and financial econometrics.
+## Research Interests
 
-Previously, I completed my MSc in Economics (Quantitative Finance) at the University of Freiburg.
+- Empirical asset pricing
+- Political risk and financial markets
+- Derivatives and option markets
+- Financial econometrics
 
-You can find my CV and current projects using the navigation menu above.
+## Education
+
+- PhD in Financial Economics, University of Liechtenstein, ongoing
+- MSc Economics, University of Freiburg
+
+## Tools & Methods
+
+R, Python, panel data econometrics, fixed effects models, financial econometrics, numerical methods
