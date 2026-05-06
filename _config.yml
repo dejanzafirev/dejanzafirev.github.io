@@ -111,7 +111,9 @@ social:
 
 # Analytics
 analytics:
-  provider: false
+  provider: "google-analytics-4"
+  google:
+    tracking_id: "G-CJKE3B47C0"
 
 
 # Reading Files
