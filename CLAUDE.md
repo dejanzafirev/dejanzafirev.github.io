@@ -62,6 +62,20 @@ Push to `master` → GitHub Pages builds automatically (usually 1–2 min). No C
 
 ## Decisions made and why
 
+### Dark theme default (commit `552ba2c`)
+The site uses the `contrast` dark theme variant (`_sass/theme/_contrast_dark.scss`). Dark mode is driven by `html[data-theme="dark"]` set in JS via `_main.js`. To prevent a white flash on load:
+- A small inline `<script>` in `_includes/head/custom.html` reads `localStorage` and immediately sets `data-theme="dark"` on `<html>` before any rendering.
+- Default for new visitors is dark (`localStorage.getItem("theme") || "dark"`).
+- The theme toggle in the nav still works; the user's choice is persisted in `localStorage`.
+
+### MathJax and Mermaid lazy-load (commit `852a205`)
+Both libraries were fetched from CDN on every page (~2.5 MB total), and Mermaid's top-level `await` kept the browser loading spinner active even on pages with no diagrams. Fixed in `_includes/footer/custom.html`:
+- MathJax: injected via JS only if the page contains math content.
+- Mermaid: wrapped in `if (document.querySelector('code.language-mermaid'))` before the dynamic `import()` — no diagrams, no fetch.
+
+### Google Analytics 4 (commit `d7a42f6`)
+Tracking ID `G-CJKE3B47C0` configured in `_config.yml`. The theme injects the gtag script automatically — do not add raw gtag HTML manually to any template.
+
 ### Mobile hamburger menu (commit `7524aa6`)
 The original nav had all links in a single `flex-wrap: nowrap` row with no responsive fallback. On screens < 925px everything overflowed. Fixed by:
 - **`_includes/masthead.html`**: Added a `.mobile-header` div (title + `<button class="nav-toggle">`) that appears only on mobile. The existing `<ul class="visible-links">` is hidden on mobile and shown as a full-width vertical dropdown when the button is clicked.
@@ -92,7 +106,7 @@ Google Search Console reported "Incorrect value type '@type'" (unparsable struct
 - The JS uses **jQuery** (`$`). Do not introduce vanilla-JS patterns that conflict with the existing `$(document).ready` structure.
 - `site.social.links` in `_config.yml` is currently empty (null). The `sameAs` field in JSON-LD correctly outputs `[]` in this state — do not add `default: site.social` as a fallback.
 - The nav breakpoint **925px** appears in three places: `_main.js` (`scssLarge`), `custom.css` (`max-width: 924px`), and implicitly in the theme SCSS. Keep them in sync if changed.
-- Google Analytics tracking ID in `_config.yml` is currently a placeholder (`G-XXXXXXXXXX`) — replace with the real ID to enable analytics.
+- Google Analytics 4 is active with tracking ID `G-CJKE3B47C0` in `_config.yml`. The theme injects the gtag script automatically — do not add raw gtag HTML to any template.
 
 ---
 
