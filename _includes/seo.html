@@ -89,11 +89,11 @@
 {% if site.social %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
+      "@context" : "https://schema.org",
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
+      "name" : {{ site.social.name | default: site.name | jsonify }},
       "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "sameAs" : {% if site.social.links %}{{ site.social.links | jsonify }}{% else %}[]{% endif %}
     }
   </script>
 {% endif %}
@@ -131,7 +131,7 @@
 {% if site.og_image %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "url": {{ seo_url | jsonify }},
       "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
@@ -159,7 +159,7 @@
     "@type": "Organization",
     "name": {{ site.author.employer | jsonify }}
   },
-  "sameAs": {{ site.social.links | default: site.social | jsonify }}
+  "sameAs": {% if site.social.links %}{{ site.social.links | jsonify }}{% else %}[]{% endif %}
 }
 </script>
 {% endif %}

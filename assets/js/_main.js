@@ -102,6 +102,12 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
+  // Mobile hamburger menu toggle
+  $('#nav-toggle').on('click', function () {
+    var isOpen = $('#site-nav').toggleClass('nav-open').hasClass('nav-open');
+    $(this).toggleClass('open').attr('aria-expanded', isOpen);
+  });
+
   // Enable the sticky footer
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");

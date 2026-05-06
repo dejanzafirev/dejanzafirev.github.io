@@ -56,3 +56,90 @@
 .masthead a:hover {
   text-decoration: underline;
 }
+
+/* ── Mobile navigation ─────────────────────────────────────────────────── */
+
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+}
+
+/* Mobile header row — hidden on desktop */
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 924px) {
+  /* Show mobile header row */
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .mobile-site-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    color: inherit;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* Animate hamburger → X when open */
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Hide full nav row by default; show as vertical list when open */
+  .no-greedy-nav .visible-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .no-greedy-nav.nav-open .visible-links {
+    display: flex;
+  }
+
+  /* Full-width items with divider lines */
+  .no-greedy-nav .visible-links li {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    margin: 0;
+  }
+
+  /* Hide the desktop-only site title inside the <ul> */
+  .no-greedy-nav .visible-links .site-title {
+    display: none;
+  }
+
+  /* Cancel the auto left-margin on Academic Profile */
+  .no-greedy-nav .visible-links .nav-right {
+    margin-left: 0;
+  }
+}
