@@ -26,7 +26,7 @@ Built on the [Academic Pages](https://github.com/academicpages/academicpages.git
 
 ```
 _config.yml              # Site-wide settings: title, author, social, theme, analytics
-_data/navigation.yml     # Header nav links (Home, Working Papers, Teaching, Talks, CV, Contact)
+_data/navigation.yml     # Header nav links (Home, Research, CV, Contact)
 _pages/                  # All site pages as Markdown (about.md, cv.md, teaching.md, …)
 _includes/
   masthead.html          # Custom nav bar — modified for hamburger mobile menu
@@ -90,6 +90,16 @@ The original nav had all links in a single `flex-wrap: nowrap` row with no respo
 - In `_main.js`, checking `document.querySelectorAll("pre>code.language-plotly")` — if zero results, Plotly is never fetched. If charts exist, a `<script>` tag is injected dynamically.
 - Result: `main.min.js` dropped from **4,500 KB → 94 KB**.
 
+### Page-load speed fixes (commit `ce6eef7`)
+Reduced render-blocking resources and removed accidental MathJax fetches on every page:
+- **Font Awesome non-blocking**: `_includes/head/custom.html` loads `font-awesome/5.15.4/css/all.min.css` via `<link rel="preload" as="style" onload="this.rel='stylesheet'">` with a `<noscript>` fallback. Previously it was a plain `<link rel="stylesheet">` and blocked first paint.
+- **MathJax is opt-in**: `_includes/footer/custom.html` now wraps the MathJax loader in `{% if page.mathjax %}`. The previous detection scanned `document.body.textContent` for `$$` and matched `[class*="math"]`, which caused false positives and ~1 MB MathJax fetches on pages with no equations. **To enable math on a page, add `mathjax: true` to its front matter.**
+- **Preconnect**: added `<link rel="preconnect">` for `cdnjs.cloudflare.com` and `cdn.jsdelivr.net` in `_includes/head/custom.html`.
+- **instant.page**: `_includes/footer/custom.html` includes `instant.page@5.2.0` to prefetch internal links on hover, making subsequent navigations feel near-instant.
+
+### Nav consolidation (commit `ce6eef7`)
+Working Papers / Teaching / Talks were merged into a single **Research** nav item pointing to `/research/` (new page `_pages/research.md`). The old `_pages/teaching.md`, `_pages/talks.md`, and `_pages/publications.md` (which served `/working-papers/`) are still in the repo as orphan pages — accessible by URL but not linked from the header.
+
 ### SEO / structured data fixes (commit `7524aa6`)
 Google Search Console reported "Incorrect value type '@type'" (unparsable structured data). Root causes in `_includes/seo.html`:
 1. `"sameAs": {{ site.social.links | default: site.social | jsonify }}` — when `links` is null, `site.social` (a hash with null values) was serialised as `{"type":null,…}`, which Google's parser misread as a nested entity with a null `@type`.  
@@ -107,6 +117,8 @@ Google Search Console reported "Incorrect value type '@type'" (unparsable struct
 - `site.social.links` in `_config.yml` is currently empty (null). The `sameAs` field in JSON-LD correctly outputs `[]` in this state — do not add `default: site.social` as a fallback.
 - The nav breakpoint **925px** appears in three places: `_main.js` (`scssLarge`), `custom.css` (`max-width: 924px`), and implicitly in the theme SCSS. Keep them in sync if changed.
 - Google Analytics 4 is active with tracking ID `G-CJKE3B47C0` in `_config.yml`. The theme injects the gtag script automatically — do not add raw gtag HTML to any template.
+- MathJax is **opt-in per page** via `mathjax: true` in front matter. Do not re-introduce body-text scanning in `_includes/footer/custom.html` — it caused false positives.
+- Font Awesome is loaded via the preload+onload swap pattern. Keep it that way to avoid render-blocking; the `<noscript>` fallback handles JS-disabled visitors.
 
 ---
 
