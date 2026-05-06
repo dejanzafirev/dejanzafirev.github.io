@@ -10,15 +10,10 @@
   })();
 </script>
 
-<!-- Pre-warm DNS/TLS for CDNs we use -->
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<!-- Pre-warm DNS/TLS for jsdelivr (instant.page, MathJax/Mermaid when enabled) -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-<!-- Support for Academicons -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
-<!-- Font Awesome — load non-render-blocking -->
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
+<!-- Icons are inlined as SVG masks in custom.css — no Font Awesome / Academicons CDN -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
