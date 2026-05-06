@@ -54,21 +54,18 @@ var toggleTheme = () => {
 // Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
 // JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
 // actually present on the page.
-import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
 let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
 if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
+  // Lazy-load Plotly only on pages that actually contain charts
+  import('./theme.js').then(({ plotlyDarkLayout, plotlyLightLayout }) => {
+    var script = document.createElement('script');
+    script.src = document.querySelector('script[src*="main.min.js"]').src.replace('main.min.js', 'plotly.min.js');
+    script.onload = function () {
       plotlyElements.forEach((elem) => {
-        // Parse the Plotly JSON data and hide it
         var jsonData = JSON.parse(elem.textContent);
         elem.parentElement.classList.add("hidden");
-
-        // Add the Plotly node
         let chartElement = document.createElement("div");
         elem.parentElement.after(chartElement);
-
-        // Set the theme for the plot and render it
         const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
         if (jsonData.layout) {
           jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
@@ -77,7 +74,8 @@ if (plotlyElements.length > 0) {
         }
         Plotly.react(chartElement, jsonData.data, jsonData.layout);
       });
-    }
+    };
+    document.head.appendChild(script);
   });
 }
 
