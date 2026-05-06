@@ -1,18 +1,13 @@
 <!-- start custom footer snippets -->
 
 <!-- <a href="/sitemap/">Sitemap</a> -->
-<!-- Support for MathJax — only load when page contains math -->
-<script>
-  if (document.querySelector('.MathJax, mjx-container, [class*="math"], script[type="math/tex"]') ||
-      document.body.textContent.indexOf('\\(') !== -1 ||
-      document.body.textContent.indexOf('$$') !== -1) {
-    var s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-    s.id = 'MathJax-script';
-    s.defer = true;
-    document.head.appendChild(s);
-  }
-</script>
+{% if page.mathjax %}
+<!-- MathJax — opt-in per page via `mathjax: true` in front matter -->
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+<!-- Prefetch internal links on hover for instant navigation -->
+<script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module" defer></script>
 
 <!-- Support for Mermaid — only load when page contains mermaid diagrams -->
 <script type="module">

@@ -11,14 +11,8 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Working papers"
-    url: /working-papers/
-
-  - title: "Teaching"
-    url: /teaching/
-
-  - title: "Talks"
-    url: /talks/
+  - title: "Research"
+    url: /research/
 
   - title: "CV"
     url: /cv/
