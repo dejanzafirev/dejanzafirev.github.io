@@ -109,11 +109,10 @@ social:
   links: # An array of links to social media profiles
 
 
-# Analytics
+# Analytics — paused (was Google Analytics 4, tracking_id G-CJKE3B47C0)
+# To re-enable, restore provider: "google-analytics-4" and the google.tracking_id below.
 analytics:
-  provider: "google-analytics-4"
-  google:
-    tracking_id: "G-CJKE3B47C0"
+  provider: false
 
 
 # Reading Files
