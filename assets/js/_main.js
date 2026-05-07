@@ -1,147 +1,125 @@
-/* ==========================================================================
-   Various functions that we want to use within the template
-   ========================================================================== */
+(() => {
+  const root = document.documentElement;
+  const darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
-let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
-};
-
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
-let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting != "system") {
-    return themeSetting;
+  function storedTheme() {
+    const theme = localStorage.getItem("theme");
+    return theme === "dark" || theme === "light" ? theme : null;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
-};
 
-// detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-// Set the theme on page load or when explicitly called
-let setTheme = (theme) => {
-  const use_theme =
-    theme ||
-    localStorage.getItem("theme") ||
-    $("html").attr("data-theme") ||
-    browserPref;
-
-  if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else if (use_theme === "light") {
-    $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+  function activeTheme() {
+    return storedTheme() || (root.hasAttribute("data-theme") ? "dark" : null) || (darkPreference.matches ? "dark" : "light");
   }
-};
 
-// Toggle the theme manually
-var toggleTheme = () => {
-  const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
-  setTheme(new_theme);
-};
+  function setTheme(theme = activeTheme()) {
+    const icon = document.getElementById("theme-icon");
 
-/* ==========================================================================
-   Plotly integration script so that Markdown codeblocks will be rendered
-   ========================================================================== */
-
-// Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
-// JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
-// actually present on the page.
-let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
-if (plotlyElements.length > 0) {
-  // Lazy-load Plotly only on pages that actually contain charts
-  import('./theme.js').then(({ plotlyDarkLayout, plotlyLightLayout }) => {
-    var script = document.createElement('script');
-    script.src = document.querySelector('script[src*="main.min.js"]').src.replace('main.min.js', 'plotly.min.js');
-    script.onload = function () {
-      plotlyElements.forEach((elem) => {
-        var jsonData = JSON.parse(elem.textContent);
-        elem.parentElement.classList.add("hidden");
-        let chartElement = document.createElement("div");
-        elem.parentElement.after(chartElement);
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-        if (jsonData.layout) {
-          jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-        } else {
-          jsonData.layout = { template: theme };
-        }
-        Plotly.react(chartElement, jsonData.data, jsonData.layout);
-      });
-    };
-    document.head.appendChild(script);
-  });
-}
-
-/* ==========================================================================
-   Actions that should occur when the page has been fully loaded
-   ========================================================================== */
-
-$(document).ready(function () {
-  // SCSS SETTINGS - These should be the same as the settings in the relevant files 
-  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
-  const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
-
-  // If the user hasn't chosen a theme, follow the OS preference
-  setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
-
-  // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
-
-  // Mobile hamburger menu toggle
-  $('#nav-toggle').on('click', function () {
-    var isOpen = $('#site-nav').toggleClass('nav-open').hasClass('nav-open');
-    $(this).toggleClass('open').attr('aria-expanded', isOpen);
-  });
-
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  $(window).resize(function () {
-    didResize = true;
-  });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
-  bumpIt();
-
-  // FitVids init
-  fitvids();
-
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
-
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      icon?.classList.remove("fa-sun");
+      icon?.classList.add("fa-moon");
+      return;
     }
-  });
 
-  // Init smooth scroll, this needs to be slightly more than then fixed masthead height
-  $("a").smoothScroll({
-    offset: -scssMastheadHeight,
-    preventDefault: false,
-  });
+    root.removeAttribute("data-theme");
+    icon?.classList.remove("fa-moon");
+    icon?.classList.add("fa-sun");
+  }
 
-});
+  function syncChromeSpacing() {
+    const masthead = document.querySelector(".masthead");
+    const footer = document.querySelector(".page__footer");
+
+    if (masthead) document.body.style.paddingTop = `${masthead.offsetHeight}px`;
+    document.body.style.marginBottom = footer ? `${footer.offsetHeight}px` : "";
+  }
+
+  function initThemeToggle() {
+    document.getElementById("theme-toggle")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      const nextTheme = root.hasAttribute("data-theme") ? "light" : "dark";
+      localStorage.setItem("theme", nextTheme);
+      setTheme(nextTheme);
+    });
+
+    darkPreference.addEventListener("change", (event) => {
+      if (!storedTheme()) setTheme(event.matches ? "dark" : "light");
+    });
+  }
+
+  function initNavigation() {
+    const nav = document.getElementById("site-nav");
+    const toggle = document.getElementById("nav-toggle");
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = nav?.classList.toggle("nav-open") || false;
+      toggle.classList.toggle("open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
+  function initAuthorLinks() {
+    document.querySelectorAll(".author__urls-wrapper button").forEach((button) => {
+      const links = button.closest(".author__urls-wrapper")?.querySelector(".author__urls");
+
+      button.addEventListener("click", () => {
+        const isOpen = button.classList.toggle("open");
+        if (links) links.style.display = isOpen ? "block" : "";
+      });
+    });
+  }
+
+  function initAnchorScrolling() {
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest('a[href^="#"], a[href*="/#"]');
+      if (!link || link.origin !== window.location.origin || link.pathname !== window.location.pathname || !link.hash) return;
+
+      const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      if (!target) return;
+
+      event.preventDefault();
+      const mastheadHeight = document.querySelector(".masthead")?.offsetHeight || 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - mastheadHeight - 8;
+      window.history.pushState(null, "", link.hash);
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  }
+
+  function initResponsiveVideos() {
+    const players = document.querySelectorAll('iframe[src*="youtube.com"], iframe[src*="youtube-nocookie.com"], iframe[src*="player.vimeo.com"]');
+
+    players.forEach((player) => {
+      if (player.parentElement?.classList.contains("fluid-width-video-wrapper")) return;
+
+      const width = Number(player.getAttribute("width")) || player.clientWidth || 16;
+      const height = Number(player.getAttribute("height")) || player.clientHeight || 9;
+      const wrapper = document.createElement("div");
+
+      wrapper.className = "fluid-width-video-wrapper";
+      wrapper.style.paddingTop = `${(height / width) * 100}%`;
+      player.removeAttribute("width");
+      player.removeAttribute("height");
+      player.parentNode.insertBefore(wrapper, player);
+      wrapper.appendChild(player);
+    });
+  }
+
+  function init() {
+    setTheme();
+    initThemeToggle();
+    initNavigation();
+    initAuthorLinks();
+    initAnchorScrolling();
+    initResponsiveVideos();
+    syncChromeSpacing();
+
+    window.addEventListener("resize", syncChromeSpacing);
+    screen.orientation?.addEventListener("change", syncChromeSpacing);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
+})();

@@ -129,23 +129,45 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
+  - _pages/archive-layout-with-content.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/projects.html
+  - _pages/talkmap.html
+  - assets/css/academicons.css
+  - assets/css/academicons.min.css
+  - assets/css/collapse.css
+  - assets/fonts
+  - assets/js/collapse.js
   - assets/js/_main.js
   - assets/js/plugins
+  - assets/js/plotly.min.js
+  - assets/js/theme.js
   - assets/js/vendor
+  - assets/webfonts
   - CHANGELOG
   - Capfile
   - config
+  - CONTRIBUTING.md
+  - docker-compose.yaml
   - Dockerfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
   - local
   - log
+  - images/themes
+  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
+  - scripts
+  - talkmap
   - tmp
   - vendor
 keep_files:

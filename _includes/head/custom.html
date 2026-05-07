@@ -10,8 +10,10 @@
   })();
 </script>
 
-<!-- Pre-warm DNS/TLS for jsdelivr (instant.page, MathJax/Mermaid when enabled) -->
+{% if page.mathjax or page.mermaid %}
+<!-- Pre-warm DNS/TLS only on pages that opt into CDN-rendered extras -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+{% endif %}
 
 <!-- Icons are inlined as SVG masks in custom.css — no Font Awesome / Academicons CDN -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
