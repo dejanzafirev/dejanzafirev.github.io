@@ -5,120 +5,108 @@ permalink: /cv/
 author_profile: true
 ---
 
-## Contact
+# Dejan Zafirev
 
-Dejan Zafirev — PhD Student & Research Assistant, University of Liechtenstein
-
-- Email: [dejan.zafirev@uni.li](mailto:dejan.zafirev@uni.li) (primary)
-- Alternate: [dzafirev@gmail.com](mailto:dzafirev@gmail.com)
-- Location: Vaduz, Liechtenstein
-- GitHub: [dejanzafirev](https://github.com/dejanzafirev) • LinkedIn: [dejanzafirev](https://www.linkedin.com/in/dejanzafirev)
+PhD Student and Research Assistant in Financial Economics<br>
+University of Liechtenstein<br>
+Email: [dejan.zafirev@uni.li](mailto:dejan.zafirev@uni.li)<br>
+GitHub: [dejanzafirev](https://github.com/dejanzafirev) | LinkedIn: [dejanzafirev](https://www.linkedin.com/in/dejanzafirev)
 
 ---
 
-## Academic profile
+## Academic appointment
 
-I am a doctoral researcher in financial economics with training in quantitative finance and applied econometrics. My work focuses on asset pricing, the effects of political uncertainty on financial markets, and empirical option-pricing models. I use R, Python, econometric methods, and computational tools to produce reproducible empirical research.
+**Research Assistant in Financial Economics**<br>
+University of Liechtenstein, Department of Business Economics<br>
+July 2025 - present
 
----
-
-## Current position
-
-**Research Assistant (Financial Economics)** — University of Liechtenstein
-
-July 2025 — present
-
-- Supporting research projects and contributing to teaching activities in the Department of Business Economics.
-- Developing empirical analyses, maintaining reproducible code, and preparing results for seminars and conferences.
-
----
-
-## Research interests
-
-- Asset pricing and derivatives
-- Financial market responses to political uncertainty and populism
-- Empirical option-pricing models and volatility modelling
-- Quantitative methods for financial economics
+- Conduct empirical research in financial economics, with emphasis on asset pricing, derivatives, and political uncertainty.
+- Support research projects, reproducible empirical analysis, seminar preparation, and teaching-related activities.
 
 ---
 
 ## Education
 
-**Doctoral Student, Business Economics (Financial Economics)** — University of Liechtenstein
+**PhD in Business Economics, Financial Economics**<br>
+University of Liechtenstein<br>
+2025 - present
 
-2025 — present
+**MSc in Economics, Quantitative Finance**<br>
+University of Freiburg, Germany<br>
+2022 - 2024
 
-**M.Sc. in Economics (Quantitative Finance)** — University of Freiburg, Germany
+- Thesis: "Option Pricing Models Beyond the Black-Scholes Framework."
+- Implemented Heston, Variance Gamma, and SABR models in Python using S&P 500 implied volatility data.
+- Selected coursework: Derivatives Pricing, Advanced Econometrics, Portfolio Management, Computational Methods.
 
-2022 — 2024
-
-- Thesis: "Option Pricing Models Beyond the Black–Scholes Framework" — implemented Heston, Variance Gamma and SABR models in Python using S&P 500 implied volatility data.
-- Relevant coursework: Derivatives Pricing, Advanced Econometrics, Portfolio Management, Computational Methods.
-
-**B.Sc. in Economics (Management & Finance)** — University of Ss. Cyril and Methodius, North Macedonia
-
-2018 — 2022
-
----
-<!--
-## Research (selected)
-
-- Populism and Financial Markets — working paper in progress (empirical analysis of political uncertainty and asset returns).
-
-- Working papers and preprints will be listed on the Publications page with links to PDFs and arXiv when available.
+**BSc in Economics, Management and Finance**<br>
+University of Ss. Cyril and Methodius, North Macedonia<br>
+2018 - 2022
 
 ---
 
-## Teaching & supervision
+## Research fields
 
-- Will list courses, guest lectures, and teaching materials as they become available. Plans include quantitative finance and econometrics modules.
+- Empirical asset pricing
+- Political uncertainty, populism, and financial markets
+- Derivatives, option pricing, and volatility modelling
+- Financial econometrics and reproducible empirical methods
+
+---
+
+## Research in progress
+
+**Populism and Financial Markets**<br>
+Working paper in progress.
+
+- Empirical analysis of political uncertainty and financial market outcomes.
+
+**Option Pricing Models Beyond the Black-Scholes Framework**<br>
+MSc thesis research project.
+
+- Comparative implementation of Heston, Variance Gamma, and SABR models using index option implied volatility data.
 
 ---
 
-## Presentations & talks
+## Teaching
 
-- Talks and conference presentations will be recorded on the Talks page (title, venue, date, slides where available).
+**Teaching support**<br>
+University of Liechtenstein<br>
+2025 - present
+
+- Support teaching-related activities in business economics and financial economics.
 
 ---
--->
 
 ## Professional experience
 
-**Product Control Intern (Trading Product Control)** — UniCredit (Munich)
+**Product Control Intern, Trading Product Control**<br>
+UniCredit, Munich<br>
+Nov 2024 - May 2025
 
-Nov 2024 — May 2025
+- Analyzed daily P&L decomposition for Equity and FICC desks.
+- Reconciled valuation discrepancies and automated reporting workflows with VBA.
+- Collaborated with trading and risk-control teams on valuation and control processes.
 
-- Analyzed daily P&L decomposition for Equity and FICC desks, reconciled discrepancies and automated reporting workflows with VBA.
-- Collaborated with traders and risk teams to validate valuations and controls.
+**Project Leader, Erasmus+ Remote Internship**<br>
+CIVITTA, Estonia<br>
+Mar 2022 - Jun 2022
 
-**Project Leader — Erasmus+ Remote Internship (CIVITTA, Estonia)**
+- Led a consulting team on market-entry analysis and financial modelling for an IT company.
+- Coordinated deliverables, client communication, and final reporting.
 
-Mar 2022 — Jun 2022
+**Finance Intern**<br>
+Pivara Skopje, Heineken/Coca-Cola HBC<br>
+Jul 2021 - Aug 2021
 
-- Led a consulting team to develop market entry and financial models for an IT company; coordinated deliverables and stakeholder communication.
-
-**Finance Intern — Pivara Skopje (Heineken/Coca-Cola HBC)**
-
-Jul 2021 — Aug 2021
-
-- Supported financial operations and sales performance analysis; contributed to process improvements.
-
----
-
-## Technical skills
-
-- Programming: Python (Pandas, NumPy, SciPy, Matplotlib), R, VBA
-- Tools: LateX, Git/GitHub, Excel, PyCharm, VS Code
-- Data & reproducibility: pandas, notebooks, scripted pipelines
+- Supported financial operations and sales performance analysis.
+- Contributed to reporting and process-improvement tasks.
 
 ---
 
-## Languages
+## Methods and tools
 
-- Macedonian: native
-- English: C1 (advanced)
-- German: B1 (intermediate)
-
----
-
-
+- Econometrics: panel data methods, fixed effects models, financial econometrics
+- Programming: Python, R, VBA
+- Python libraries: Pandas, NumPy, SciPy, Matplotlib
+- Research workflow: LaTeX, Git/GitHub, scripted pipelines, notebooks
