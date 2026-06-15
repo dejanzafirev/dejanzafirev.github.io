@@ -12,16 +12,7 @@ University of Liechtenstein<br>
 Email: [dejan.zafirev@uni.li](mailto:dejan.zafirev@uni.li)<br>
 GitHub: [dejanzafirev](https://github.com/dejanzafirev) | LinkedIn: [dejanzafirev](https://www.linkedin.com/in/dejanzafirev)
 
----
-
-## Academic appointment
-
-**Research Assistant in Financial Economics**<br>
-University of Liechtenstein, Department of Business Economics<br>
-July 2025 - present
-
-- Conduct empirical research in financial economics, with emphasis on asset pricing, derivatives, and political uncertainty.
-- Support research projects, reproducible empirical analysis, seminar preparation, and teaching-related activities.
+[Download CV (PDF)](/files/cv.pdf){: .btn .btn--primary}
 
 ---
 
@@ -36,7 +27,7 @@ University of Freiburg, Germany<br>
 2022 - 2024
 
 - Thesis: "Option Pricing Models Beyond the Black-Scholes Framework."
-- Implemented Heston, Variance Gamma, and SABR models in Python using S&P 500 implied volatility data.
+- Implemented Heston, Variance Gamma, and SABR models in Python on S&P 500 implied-volatility data, pricing Heston and Variance Gamma via the COS (Fourier-cosine) method on their characteristic functions.
 - Selected coursework: Derivatives Pricing, Advanced Econometrics, Portfolio Management, Computational Methods.
 
 **BSc in Economics, Management and Finance**<br>
@@ -45,7 +36,7 @@ University of Ss. Cyril and Methodius, North Macedonia<br>
 
 ---
 
-## Research fields
+## Research interests
 
 - Empirical asset pricing
 - Political uncertainty, populism, and financial markets
@@ -54,17 +45,37 @@ University of Ss. Cyril and Methodius, North Macedonia<br>
 
 ---
 
-## Research in progress
+## Working papers
 
-**Populism and Financial Markets**<br>
-Working paper in progress.
+**What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk**<br>
+Work in progress.
 
-- Empirical analysis of political uncertainty and financial market outcomes.
+- Combines text-based populism and liberalism measures with option-implied risk measures to study how political uncertainty is priced in equity markets, using an event-study design around elections.
 
 **Option Pricing Models Beyond the Black-Scholes Framework**<br>
 MSc thesis research project.
 
-- Comparative implementation of Heston, Variance Gamma, and SABR models using index option implied volatility data.
+- Comparative implementation and evaluation of the Heston, Variance Gamma, and SABR models on S&P 500 option data, assessing the volatility smile across short-, medium-, and long-term maturities.
+
+---
+
+## Presentations
+
+**APF International Conference of Macroeconomics and Finance** — Athens University of Economics and Business<br>
+Athens, Greece, July 2026
+
+- "What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk."
+
+---
+
+## Academic appointment
+
+**Research Assistant in Financial Economics**<br>
+University of Liechtenstein, Department of Business Economics<br>
+July 2025 - present
+
+- Conduct empirical research in financial economics, with emphasis on asset pricing, derivatives, and political uncertainty.
+- Support research projects, reproducible empirical analysis, seminar preparation, and teaching-related activities.
 
 ---
 
@@ -104,7 +115,7 @@ Jul 2021 - Aug 2021
 
 ---
 
-## Methods and tools
+## Skills and tools
 
 - Econometrics: panel data methods, fixed effects models, financial econometrics
 - Programming: Python, R, VBA

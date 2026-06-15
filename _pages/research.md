@@ -12,7 +12,7 @@ option-pricing methods.
 ## Working papers
 
 ### What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk
-*Work in progress. To be presented at the APF Conference of Macro and Finance, Athens University of Economics and Business, 9–11 July 2026.*
+*Work in progress. To be presented at the APF International Conference of Macroeconomics and Finance, Athens University of Economics and Business, 9–11 July 2026.*
 
 <!-- TODO: add coauthors / headline finding when ready -->
 This project studies how political uncertainty is priced in equity markets, using
