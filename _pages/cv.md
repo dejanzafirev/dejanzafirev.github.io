@@ -79,16 +79,6 @@ July 2025 - present
 
 ---
 
-## Teaching
-
-**Teaching support**<br>
-University of Liechtenstein<br>
-2025 - present
-
-- Support teaching-related activities in business economics and financial economics.
-
----
-
 ## Professional experience
 
 **Product Control Intern, Trading Product Control**<br>
