@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Dejan Zafirev"
 title_separator          : "-"
 name                     : &name "Dejan Zafirev"
@@ -28,9 +28,9 @@ author:
   email            : "dejan.zafirev@uni.li"
 
   # Academic websites
-  #googlescholar    : ""                     # paste if you have one
-  #orcid            : ""                     # paste if you have one
-  #ssrn             : ""                     # optional
+  #googlescholar    : ""                     # paste full URL if you have one, e.g. https://scholar.google.com/citations?user=XXXX
+  orcid             : "https://orcid.org/0009-0004-1127-2500"
+  #ssrn             : ""                     # optional — paste full SSRN author URL
   #researchgate     : ""                     # optional
 
   # Repositories and software development
@@ -104,9 +104,13 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Person" # Person or Organization (defaults to Person)
+  name                   : "Dejan Zafirev" # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles — populates JSON-LD "sameAs" so Google links your name to these profiles
+    - "https://orcid.org/0009-0004-1127-2500"
+    - "https://www.uni.li/en/dejan.zafirev"
+    - "https://github.com/dejanzafirev"
+    - "https://www.linkedin.com/in/dejanzafirev"
 
 
 # Analytics — paused (was Google Analytics 4, tracking_id G-CJKE3B47C0)

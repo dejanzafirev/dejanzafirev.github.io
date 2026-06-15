@@ -5,6 +5,50 @@ permalink: /research/
 author_profile: false
 ---
 
+My research is in empirical asset pricing, with a focus on how political and
+macroeconomic uncertainty is priced in financial markets, and on derivatives and
+option-pricing methods.
+
 ## Working papers
 
-A curated list of my working papers and preprints. PDFs, abstracts, and links to code/notebooks will be added as work becomes available.
+### Populism, Liberalism, and Option-Implied Tail Risk
+*Work in progress.*
+
+<!-- TODO: refine wording and add coauthors / headline finding when ready -->
+This project studies how political climate is priced in equity markets. I combine
+text-based populism and liberalism measures (from the
+[populism-llm](https://github.com/sstoeckl/populism-llm) project) with
+option-implied risk measures constructed from option data, including
+option-implied tail-risk measures. The analysis examines how the
+populism–liberalism variables and their interactions relate to these
+forward-looking, market-based risk measures.
+
+<!-- Add links as they become available:
+[PDF](/files/populism.pdf){: .btn .btn--primary} ·
+[SSRN](https://papers.ssrn.com/...){: .btn} ·
+[Code](https://github.com/dejanzafirev/...){: .btn} -->
+
+---
+
+### Option Pricing Models Beyond the Black–Scholes Framework
+*MSc thesis research project, University of Freiburg.*
+
+A comparative implementation and evaluation of the Heston, Variance Gamma, and
+SABR models, calibrated to S&P 500 implied-volatility data in Python. The project
+assesses how each model captures the volatility smile relative to the
+Black–Scholes benchmark.
+
+<!-- Add links as available:
+[PDF](/files/option-pricing.pdf){: .btn .btn--primary} ·
+[Code](https://github.com/dejanzafirev/...){: .btn} -->
+
+---
+
+## Research interests
+
+- Empirical asset pricing
+- Political uncertainty, populism, and financial markets
+- Derivatives, option pricing, and volatility modelling
+- Financial econometrics and reproducible empirical methods
+
+Slides from related talks are on the [Talks](/talks/) page.
