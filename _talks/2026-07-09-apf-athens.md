@@ -7,11 +7,10 @@ venue: "APF Conference of Macro and Finance, Athens University of Economics and 
 date: 2026-07-09
 location: "Athens, Greece"
 # Optional fields:
-# link: "https://link-to-conference-program"   # makes the title a clickable link
+# link: "https://apf.aueb.gr/conference-programme/"   # makes the title a clickable link
 # slidesurl: "/files/apf-athens-slides.pdf"     # link to your slide deck
 ---
 
 Presentation of my working paper combining text-based populism and liberalism
 measures with option-implied tail-risk measures to study how political
-uncertainty is priced in equity markets. Slides will be posted after the
-conference.
+uncertainty is priced in equity markets. 
