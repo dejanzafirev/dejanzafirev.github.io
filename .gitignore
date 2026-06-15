@@ -31,3 +31,12 @@ Desktop.ini
 
 # Local-only AI assistant context (not published, not tracked)
 CLAUDE.md
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+files/build.log
