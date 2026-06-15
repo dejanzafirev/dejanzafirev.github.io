@@ -11,11 +11,11 @@ option-pricing methods.
 
 ## Working papers
 
-### Populism, Liberalism, and Option-Implied Tail Risk
-*Work in progress.*
+### What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk
+*Work in progress. To be presented at the APF Conference of Macro and Finance, Athens University of Economics and Business, 9–11 July 2026.*
 
 <!-- TODO: refine wording and add coauthors / headline finding when ready -->
-This project studies how political climate is priced in equity markets. I combine
+This project studies how political uncertainty is priced in equity markets. I combine
 text-based populism and liberalism measures (from the
 [populism-llm](https://github.com/sstoeckl/populism-llm) project) with
 option-implied risk measures constructed from option data, including
