@@ -1,3 +1,47 @@
+/* ==========================================================================
+   THEME PALETTE — "default" variant (overrides the contrast colors baked into
+   the static main.css). main.css is a pre-built/PurgeCSS'd file, so the
+   `site_theme` config no longer recompiles; these variables repaint the site.
+   Values computed from _sass/theme/_default_{light,dark}.scss.
+   ========================================================================== */
+:root {
+  --global-base-color            : #2f7f93;
+  --global-bg-color              : #fff;
+  --global-footer-bg-color       : #f2f3f3;
+  --global-border-color          : #f2f2f3;
+  --global-dark-border-color     : #bdc1c4;
+  --global-code-background-color : #fafafa;
+  --global-code-text-color       : #313436;
+  --global-fig-caption-color     : #767a7d;
+  --global-link-color            : #52adc8;
+  --global-link-color-hover      : #235f6e;
+  --global-link-color-visited    : #639fae;
+  --global-masthead-link-color   : #494e52;
+  --global-masthead-link-color-hover : #5c6266;
+  --global-text-color            : #494e52;
+  --global-text-color-light      : #bcc0c4;
+  --global-thead-color           : #f2f2f3;
+}
+
+html[data-theme="dark"] {
+  --global-base-color            : #0ea1c5;
+  --global-bg-color              : #474747;
+  --global-footer-bg-color       : #474747;
+  --global-border-color          : #bcc0c4;
+  --global-dark-border-color     : #dadada;
+  --global-code-background-color : #fafafa;
+  --global-code-text-color       : #313436;
+  --global-fig-caption-color     : #bcc0c4;
+  --global-link-color            : #0ea1c5;
+  --global-link-color-hover      : #0a7994;
+  --global-link-color-visited    : #4ab8d4;
+  --global-masthead-link-color   : #ffffff;
+  --global-masthead-link-color-hover : #0ea1c5;
+  --global-text-color            : #ffffff;
+  --global-text-color-light      : #f3f3f3;
+  --global-thead-color           : #ededed;
+}
+
 /* Avatar: square-ish (use 0px for perfectly square corners) */
 .author__avatar img {
   border-radius: 6px !important;
