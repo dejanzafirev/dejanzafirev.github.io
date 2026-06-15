@@ -10,16 +10,22 @@ University of Liechtenstein. The site hosts my research, talks, and CV.
 - [Jekyll](https://jekyllrb.com/) static site, built and deployed automatically by GitHub Pages on push to `master`.
 - Based on the [Academic Pages](https://github.com/academicpages/academicpages.github.io) theme (a fork of [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)).
 
-## Structure
+## Where to edit
 
-| Path | Purpose |
-|------|---------|
-| `_config.yml` | Site settings (title, author, theme, SEO) |
-| `_data/navigation.yml` | Header navigation |
-| `_pages/` | Pages: about (home), research, cv, contact |
-| `_talks/` | Talks and presentations (one Markdown file per talk) |
-| `assets/css/custom.css` | Custom styles |
-| `assets/js/_main.js` | JS source (rebuild `main.min.js` with `npm run uglify`) |
+These are the only places that need editing for normal updates:
+
+| To change... | Edit |
+|------|------|
+| Page text (about / research / cv / contact) | `_pages/` |
+| Add or edit a talk | `_talks/` (one Markdown file per talk) |
+| The header menu | `_data/navigation.yml` |
+| Site title, name, theme, SEO | `_config.yml` |
+| Custom colors / styling | `assets/css/custom.css` |
+
+**Leave everything else alone** — `_layouts/`, `_includes/`, `_sass/`, and `assets/js/`
+are the theme engine. `_site/` is auto-generated output (gitignored; never edit it).
+
+> Note: the `_`-prefixed folder names are required by Jekyll and **must not be renamed**.
 
 ## Run locally
 
