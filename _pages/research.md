@@ -33,9 +33,12 @@ parties' liberal commitments and their populist positions.
 *MSc thesis research project, University of Freiburg.*
 
 A comparative implementation and evaluation of the Heston, Variance Gamma, and
-SABR models, calibrated to S&P 500 implied-volatility data in Python. The project
-assesses how each model captures the volatility smile relative to the
-Black–Scholes benchmark.
+SABR models, calibrated to S&P 500 implied-volatility data in Python. Heston and
+Variance Gamma are priced via the COS (Fourier-cosine) method applied to their
+characteristic functions, enabling fast and accurate calibration. The project
+compares the three models against the Black–Scholes benchmark and assesses how
+each captures the volatility smile across short-, medium-, and long-term
+maturities.
 
 <!-- Add links as available:
 [PDF](/files/option-pricing.pdf){: .btn .btn--primary} ·
