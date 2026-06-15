@@ -25,21 +25,21 @@
 
 html[data-theme="dark"] {
   --global-base-color            : #60a5fa;
-  --global-bg-color              : #18181b;
-  --global-footer-bg-color       : #18181b;
-  --global-border-color          : #3f3f46;
-  --global-dark-border-color     : #52525b;
-  --global-code-background-color : #27272a;
-  --global-code-text-color       : #e4e4e7;
-  --global-fig-caption-color     : #a1a1aa;
+  --global-bg-color              : #0f172a;
+  --global-footer-bg-color       : #0f172a;
+  --global-border-color          : #334155;
+  --global-dark-border-color     : #475569;
+  --global-code-background-color : #1e293b;
+  --global-code-text-color       : #e2e8f0;
+  --global-fig-caption-color     : #94a3b8;
   --global-link-color            : #60a5fa;
   --global-link-color-hover      : #93c5fd;
   --global-link-color-visited    : #93c5fd;
-  --global-masthead-link-color   : #ffffff;
+  --global-masthead-link-color   : #e2e8f0;
   --global-masthead-link-color-hover : #60a5fa;
-  --global-text-color            : #e4e4e7;
-  --global-text-color-light      : #a1a1aa;
-  --global-thead-color           : #27272a;
+  --global-text-color            : #e2e8f0;
+  --global-text-color-light      : #94a3b8;
+  --global-thead-color           : #1e293b;
 }
 
 /* Avatar: square-ish (use 0px for perfectly square corners) */
