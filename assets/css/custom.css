@@ -5,7 +5,7 @@
    Values computed from _sass/theme/_default_{light,dark}.scss.
    ========================================================================== */
 :root {
-  --global-base-color            : #1b3a6b;
+  --global-base-color            : #2563eb;
   --global-bg-color              : #fff;
   --global-footer-bg-color       : #f2f3f3;
   --global-border-color          : #f2f2f3;
@@ -13,18 +13,18 @@
   --global-code-background-color : #fafafa;
   --global-code-text-color       : #313436;
   --global-fig-caption-color     : #767a7d;
-  --global-link-color            : #1b4f8a;
-  --global-link-color-hover      : #12365f;
-  --global-link-color-visited    : #4a6f9c;
+  --global-link-color            : #2563eb;
+  --global-link-color-hover      : #1d4ed8;
+  --global-link-color-visited    : #1e40af;
   --global-masthead-link-color   : #494e52;
-  --global-masthead-link-color-hover : #1b3a6b;
+  --global-masthead-link-color-hover : #2563eb;
   --global-text-color            : #494e52;
   --global-text-color-light      : #bcc0c4;
   --global-thead-color           : #f2f2f3;
 }
 
 html[data-theme="dark"] {
-  --global-base-color            : #5b9bd5;
+  --global-base-color            : #60a5fa;
   --global-bg-color              : #474747;
   --global-footer-bg-color       : #474747;
   --global-border-color          : #bcc0c4;
@@ -32,11 +32,11 @@ html[data-theme="dark"] {
   --global-code-background-color : #fafafa;
   --global-code-text-color       : #313436;
   --global-fig-caption-color     : #bcc0c4;
-  --global-link-color            : #5b9bd5;
-  --global-link-color-hover      : #7db0e0;
-  --global-link-color-visited    : #9ab8d8;
+  --global-link-color            : #60a5fa;
+  --global-link-color-hover      : #93c5fd;
+  --global-link-color-visited    : #93c5fd;
   --global-masthead-link-color   : #ffffff;
-  --global-masthead-link-color-hover : #5b9bd5;
+  --global-masthead-link-color-hover : #60a5fa;
   --global-text-color            : #ffffff;
   --global-text-color-light      : #f3f3f3;
   --global-thead-color           : #ededed;
