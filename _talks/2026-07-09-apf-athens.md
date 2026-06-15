@@ -3,7 +3,7 @@ title: "What Drives the Price of Populism? Liberal Commitments and Market Percep
 collection: talks
 type: "Conference presentation"
 permalink: /talks/2026-07-09-apf-athens
-venue: "APF Conference of Macro and Finance, Athens University of Economics and Business"
+venue: "APF International Conference of Macroeconomics and Finance, Athens University of Economics and Business"
 date: 2026-07-09
 location: "Athens, Greece"
 link: "https://apf.aueb.gr/conference-programme/"   # makes the title link to the programme
