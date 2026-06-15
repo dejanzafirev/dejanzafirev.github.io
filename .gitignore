@@ -1,6 +1,8 @@
 # Ignore the contents of the _site directory and other cache directories
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 # Ignore the directory for local files during development
 local/
@@ -21,3 +23,11 @@ package-lock.json
 
 # Ignore files created by MacOS
 .DS_Store
+
+# Ignore files created by Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local-only AI assistant context (not published, not tracked)
+CLAUDE.md

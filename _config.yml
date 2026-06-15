@@ -133,13 +133,6 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
-  - _pages/archive-layout-with-content.md
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/page-archive.html
-  - _pages/portfolio.html
-  - _pages/projects.html
-  - _pages/talkmap.html
   - assets/css/academicons.css
   - assets/css/academicons.min.css
   - assets/css/collapse.css
@@ -154,9 +147,6 @@ exclude:
   - CHANGELOG
   - Capfile
   - config
-  - CONTRIBUTING.md
-  - docker-compose.yaml
-  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - Gruntfile.js
@@ -164,14 +154,11 @@ exclude:
   - LICENSE
   - local
   - log
-  - images/themes
-  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
-  - scripts
-  - talkmap
+  - README.md
   - tmp
   - vendor
 keep_files:
@@ -203,15 +190,6 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
