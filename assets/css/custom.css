@@ -29,8 +29,8 @@ html[data-theme="dark"] {
   --global-footer-bg-color       : #18181b;
   --global-border-color          : #3f3f46;
   --global-dark-border-color     : #52525b;
-  --global-code-background-color : #fafafa;
-  --global-code-text-color       : #313436;
+  --global-code-background-color : #27272a;
+  --global-code-text-color       : #e4e4e7;
   --global-fig-caption-color     : #a1a1aa;
   --global-link-color            : #60a5fa;
   --global-link-color-hover      : #93c5fd;
