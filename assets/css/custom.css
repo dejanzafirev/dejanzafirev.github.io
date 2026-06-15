@@ -79,8 +79,10 @@ html[data-theme="dark"] {
 
 /* Name on the left */
 .site-title {
-  font-weight: 600;
-  margin-right: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  margin-right: 14px;
 }
 
 /* Home / CV / Projects close to the name */
@@ -99,8 +101,30 @@ html[data-theme="dark"] {
   color: inherit !important;
   text-decoration: none;
 }
+/* Hover: smooth accent-color change instead of an underline */
 .masthead a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--global-base-color) !important;
+}
+
+/* Remove the 1px divider line drawn under the header bar */
+.masthead::after {
+  display: none;
+}
+
+/* Nav links: a touch of weight + spacing, smooth hover */
+.visible-links .nav-link a {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease;
+}
+
+/* If a nav item is ever marked active, show it in the accent color (no underline) */
+.masthead__menu-item.selected a,
+.masthead__menu-item.selected a:hover {
+  border-bottom: none;
+  font-weight: 600;
+  color: var(--global-base-color) !important;
 }
 
 /* ── Mobile navigation ─────────────────────────────────────────────────── */
