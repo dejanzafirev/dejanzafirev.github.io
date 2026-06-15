@@ -52,5 +52,3 @@ maturities.
 - Political uncertainty, populism, and financial markets
 - Derivatives, option pricing, and volatility modelling
 - Financial econometrics and reproducible empirical methods
-
-Slides from related talks are on the [Talks](/talks/) page.
