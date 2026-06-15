@@ -6,8 +6,8 @@ permalink: /talks/2026-07-09-apf-athens
 venue: "APF Conference of Macro and Finance, Athens University of Economics and Business"
 date: 2026-07-09
 location: "Athens, Greece"
+link: "https://apf.aueb.gr/conference-programme/"   # makes the title link to the programme
 # Optional fields:
-# link: "https://apf.aueb.gr/conference-programme/"   # makes the title a clickable link
 # slidesurl: "/files/apf-athens-slides.pdf"     # link to your slide deck
 ---
 
