@@ -14,14 +14,13 @@ option-pricing methods.
 ### What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk
 *Work in progress. To be presented at the APF Conference of Macro and Finance, Athens University of Economics and Business, 9–11 July 2026.*
 
-<!-- TODO: refine wording and add coauthors / headline finding when ready -->
-This project studies how political uncertainty is priced in equity markets. I combine
-text-based populism and liberalism measures (from the
+<!-- TODO: add coauthors / headline finding when ready -->
+This project studies how political uncertainty is priced in equity markets, using
+an event-study design around elections. I combine text-based populism and
+liberalism measures (from the
 [populism-llm](https://github.com/sstoeckl/populism-llm) project) with
-option-implied risk measures constructed from option data, including
-option-implied tail-risk measures. The analysis examines how the
-populism–liberalism variables and their interactions relate to these
-forward-looking, market-based risk measures.
+option-implied risk measures, and analyze how markets respond simultaneously to
+parties' liberal commitments and their populist positions.
 
 <!-- Add links as they become available:
 [PDF](/files/populism.pdf){: .btn .btn--primary} ·
