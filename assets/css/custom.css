@@ -50,21 +50,6 @@ html[data-theme="dark"] {
   width: 100%;
 }
 
-/* Academic Profile button */
-.academic-button {
-  background-color: transparent;
-  border: 1px solid #888;
-  color: #ddd !important;
-  padding: 5px 12px;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-.academic-button:hover {
-  background-color: #fff;
-  color: #000 !important;
-}
-
 /* Header row layout */
 .no-greedy-nav .visible-links {
   display: flex;
@@ -283,4 +268,61 @@ html[data-theme="dark"] {
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+/* ==========================================================================
+   VISUAL POLISH — readable width, typography, dividers, buttons
+   ========================================================================== */
+
+/* Comfortable reading line length + vertical rhythm for body content */
+.page__content {
+  max-width: 46rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* Consistent heading weights and spacing */
+.page__content h1,
+.page__content h2,
+.page__content h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+.page__content h2 { font-size: 1.45rem; }
+.page__content h3 { font-size: 1.15rem; }
+
+/* Softer, better-spaced section dividers (the --- rules) */
+.page__content hr {
+  border: 0;
+  height: 1px;
+  background: var(--global-border-color);
+  opacity: 0.5;
+  margin: 2.2rem 0;
+}
+
+/* Unified, rounded buttons with a smooth hover (Download CV, etc.) */
+.btn {
+  border-radius: 6px;
+  padding: 0.5em 1.1em;
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+.btn:hover { filter: brightness(1.1); }
+.btn:active { transform: translateY(1px); }
+
+/* Academic Profile button — theme-aware (was hard-coded greys) */
+.academic-button {
+  background-color: transparent;
+  border: 1px solid var(--global-border-color);
+  color: var(--global-text-color) !important;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.academic-button:hover {
+  background-color: var(--global-base-color);
+  border-color: var(--global-base-color);
+  color: #fff !important;
 }

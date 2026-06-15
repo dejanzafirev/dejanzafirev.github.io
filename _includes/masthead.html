@@ -28,7 +28,8 @@
     {% else %}
       {% assign domain = base_path %}
     {% endif %}
-    <li class="masthead__menu-item nav-link">
+    {% if page.url == link.url %}{% assign navactive = ' selected' %}{% else %}{% assign navactive = '' %}{% endif %}
+    <li class="masthead__menu-item nav-link{{ navactive }}">
       <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
     </li>
   {% endfor %}
