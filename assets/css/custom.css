@@ -42,10 +42,10 @@ html[data-theme="dark"] {
   --global-thead-color           : #1e293b;
 }
 
-/* Avatar: square-ish (use 0px for perfectly square corners) */
+/* Avatar: rounded square (use 0px for perfectly square corners, 50% for circle) */
 .author__avatar img {
-  border-radius: 50% !important;  /* circular avatar; was 6px rounded-square */
-  aspect-ratio: 1 / 1;            /* force a square crop so the circle isn't an oval */
+  border-radius: 10px !important;  /* rounded square; was 50% circle */
+  aspect-ratio: 1 / 1;             /* force a square crop so it isn't stretched */
   object-fit: cover;
   width: 100%;
 }
