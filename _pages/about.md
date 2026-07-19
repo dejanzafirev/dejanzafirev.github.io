@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-seo_title: "Dejan Zafirev — PhD Student in Financial Economics"
+seo_title: "Dejan Zafirev"
 author_profile: true
 redirect_from: 
   - /about/

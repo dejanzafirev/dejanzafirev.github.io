@@ -11,6 +11,3 @@ link: "https://apf.aueb.gr/conference-programme/"   # makes the title link to th
 # slidesurl: "/files/apf-athens-slides.pdf"     # link to your slide deck
 ---
 
-Presentation of my working paper combining text-based populism and liberalism
-measures with option-implied tail-risk measures to study how political
-uncertainty is priced in equity markets. 
