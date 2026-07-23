@@ -7,6 +7,7 @@ venue: "APF International Conference of Macroeconomics and Finance, Athens Unive
 date: 2026-07-09
 location: "Athens, Greece"
 link: "https://apf.aueb.gr/conference-programme/"   # makes the title link to the programme
+shortlink: "APF 2026"   # short label shown in the talks list instead of the full venue text
 # Optional fields:
 # slidesurl: "/files/apf-athens-slides.pdf"     # link to your slide deck
 ---
