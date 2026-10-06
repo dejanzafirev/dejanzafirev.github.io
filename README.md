@@ -25,6 +25,22 @@ These are the only places that need editing for normal updates:
 **Leave everything else alone** — `_layouts/`, `_includes/`, `_sass/`, and `assets/js/`
 are the theme engine. `_site/` is auto-generated output (gitignored; never edit it).
 
+## Where the HTML lives
+
+There is no single HTML file per page. Jekyll assembles each page from pieces:
+
+| Piece | Location |
+|------|------|
+| Page content (Markdown, or HTML in `_pages/talks.html`) | `_pages/`, `_talks/` |
+| Page skeleton (`<html>`, `<body>`, wrappers) | `_layouts/default.html`, `single.html`, `archive.html`, `talk.html` |
+| `<head>`, meta tags, SEO | `_includes/head.html`, `_includes/head/custom.html`, `_includes/seo.html` |
+| Header / nav | `_includes/masthead.html` |
+| Left sidebar (author card) | `_includes/author-profile.html`, `_includes/sidebar.html` |
+| Footer and lazy-loaded scripts | `_includes/footer.html`, `_includes/footer/custom.html`, `_includes/scripts.html` |
+| Google Analytics | `_config.yml` (`analytics:`), template in `_includes/analytics-providers/` |
+
+Static files: `images/` (photos), `files/` (CV PDF/TeX), `assets/` (CSS, JS).
+
 > Note: the `_`-prefixed folder names are required by Jekyll and **must not be renamed**.
 
 ## Run locally
