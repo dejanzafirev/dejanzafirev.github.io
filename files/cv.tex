@@ -7,6 +7,7 @@
 \usepackage{titlesec}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{graphicx}
 \usepackage{xcolor}
 \definecolor{grey}{RGB}{90, 90, 90}
 \definecolor{lightgrey}{RGB}{120, 120, 120}
@@ -34,14 +35,19 @@
 
 \begin{document}
 
-% Header
+% Header: name and contact on the left, photo on the right
+\noindent\begin{minipage}[b]{0.8\textwidth}
 {\fontsize{26}{28}\selectfont Dejan Zafirev}\\[4pt]
-{\large PhD Student and Research Assistant in Financial Economics, University of Liechtenstein}\\[5pt]
+{\normalsize PhD Student and Research Assistant in Financial Economics\\ University of Liechtenstein}\\[5pt]
 {\small
 \href{mailto:dejan.zafirev@uni.li}{dejan.zafirev@uni.li} \quad\textperiodcentered\quad
-\href{https://dejanzafirev.github.io}{dejanzafirev.github.io} \quad\textperiodcentered\quad
+\href{https://dejanzafirev.github.io}{dejanzafirev.github.io}\\[2pt]
 \href{https://orcid.org/0009-0004-1127-2500}{ORCID 0009-0004-1127-2500} \quad\textperiodcentered\quad
 \href{https://www.linkedin.com/in/dejanzafirev}{linkedin.com/in/dejanzafirev}}
+\end{minipage}\hfill
+\begin{minipage}[b]{2.8cm}\raggedleft
+\includegraphics[width=2.5cm, height=2.5cm, keepaspectratio]{pic.jpg}
+\end{minipage}
 
 \section*{Positions}
 
