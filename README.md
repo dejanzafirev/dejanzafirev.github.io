@@ -3,55 +3,38 @@
 Source for my personal academic website — **[dejanzafirev.github.io](https://dejanzafirev.github.io)**.
 
 I'm Dejan Zafirev, a PhD student and Research Assistant in Financial Economics at the
-University of Liechtenstein. The site hosts my research, talks, and CV.
+University of Liechtenstein.
 
-## Tech stack
+## How it works
 
-- [Jekyll](https://jekyllrb.com/) static site, built and deployed automatically by GitHub Pages on push to `master`.
-- Based on the [Academic Pages](https://github.com/academicpages/academicpages.github.io) theme (a fork of [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)).
+The site is a single hand-written page: `index.html`, with the CSS inside it. There is no
+framework and no build step. The empty `.nojekyll` file tells GitHub Pages to serve the files
+as they are. Pushing to `master` publishes the site in 1–2 minutes.
 
 ## Where to edit
 
-These are the only places that need editing for normal updates:
-
 | To change... | Edit |
 |------|------|
-| Page text (about / research / cv / contact) | `_pages/` |
-| Add or edit a talk | `_talks/` (one Markdown file per talk) |
-| The header menu | `_data/navigation.yml` |
-| Site title, name, theme, SEO | `_config.yml` |
-| Custom colors / styling | `assets/css/custom.css` |
+| Text, links, sections | `index.html` |
+| CV | replace `files/cv.pdf` (LaTeX source: `files/cv.tex`) |
+| Photo | `images/pic.JPG` |
+| Social preview image | `images/og-card.png` |
+| Colors and fonts | the `<style>` block at the top of `index.html` |
 
-**Leave everything else alone** — `_layouts/`, `_includes/`, `_sass/`, and `assets/js/`
-are the theme engine. `_site/` is auto-generated output (gitignored; never edit it).
+## Other files
 
-## Where the HTML lives
-
-There is no single HTML file per page. Jekyll assembles each page from pieces:
-
-| Piece | Location |
+| File | Purpose |
 |------|------|
-| Page content (Markdown, or HTML in `_pages/talks.html`) | `_pages/`, `_talks/` |
-| Page skeleton (`<html>`, `<body>`, wrappers) | `_layouts/default.html`, `single.html`, `archive.html`, `talk.html` |
-| `<head>`, meta tags, SEO | `_includes/head.html`, `_includes/head/custom.html`, `_includes/seo.html` |
-| Header / nav | `_includes/masthead.html` |
-| Left sidebar (author card) | `_includes/author-profile.html`, `_includes/sidebar.html` |
-| Footer and lazy-loaded scripts | `_includes/footer.html`, `_includes/footer/custom.html`, `_includes/scripts.html` |
-| Google Analytics | `_config.yml` (`analytics:`), template in `_includes/analytics-providers/` |
+| `research/`, `cv/`, `contact/`, `talks/` | Redirect stubs so old links still work |
+| `robots.txt`, `sitemap.xml` | Search engines |
+| `google559056fe9755c648.html` | Google Search Console verification — keep it |
 
-Static files: `images/` (photos), `files/` (CV PDF/TeX), `assets/` (CSS, JS).
+Google Analytics (`G-CJKE3B47C0`) is the `gtag` snippet in the `<head>` of `index.html`.
 
-> Note: the `_`-prefixed folder names are required by Jekyll and **must not be renamed**.
+## Preview locally
 
-## Run locally
-
-```bash
-bundle install
-bundle exec jekyll serve
-# open http://localhost:4000
+```
+python -m http.server 8000
 ```
 
-## License
-
-Site content © Dejan Zafirev. Theme released under the
-[MIT License](LICENSE) by the Academic Pages / Minimal Mistakes authors.
+then open http://localhost:8000.
