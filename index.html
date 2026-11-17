@@ -148,6 +148,17 @@
   .pmeta em { font-style: italic; }
   .me { color: var(--text); font-weight: 500; }
 
+  details.abstract summary { cursor: pointer; list-style: none; }
+  details.abstract summary::-webkit-details-marker { display: none; }
+  details.abstract summary::after {
+    content: "Abstract ▸"; margin-left: 8px; font-size: 0.8rem; font-weight: 400;
+    color: var(--accent); white-space: nowrap;
+  }
+  details.abstract[open] summary::after { content: "Abstract ▾"; }
+  details.abstract summary:hover { color: var(--accent); }
+  details.abstract .pub-description { font-size: 0.93rem; line-height: 1.6; margin: 8px 0; }
+  details.abstract .pmeta { margin: 0 0 8px; }
+
   dl.cv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; margin: 0; font-size: 0.95rem; }
   dl.cv dt { color: var(--muted); }
   dl.cv dd { margin: 0; }
@@ -175,7 +186,7 @@
     <img class="portrait" src="images/pic.JPG" alt="Portrait of Dejan Zafirev" width="132" height="132">
     <div>
       <h1>Dejan Zafirev</h1>
-      <p class="role"><strong>PhD Student and Research Assistant in Financial Economics</strong> · University of Liechtenstein</p>
+      <p class="role"><strong>PhD Student in Financial Economics</strong> · University of Liechtenstein</p>
       <nav class="links" aria-label="Profiles">
         <a href="mailto:dejan.zafirev@uni.li">Email</a>
         <a href="https://orcid.org/0009-0004-1127-2500">ORCID</a>
@@ -195,7 +206,7 @@
 
   <section id="about">
     <h2>About</h2>
-    <p class="lead">I am a PhD student and Research Assistant in Financial Economics at the University of Liechtenstein. My research asks how political shocks are priced in financial markets, using event-study analysis and market-implied measures. I am also interested in volatility dynamics and option pricing models.</p>
+    <p class="lead">I am a PhD student and Research Assistant at the department of Financial Economics at the University of Liechtenstein under the supervision of Prof. Dr. Sebastian Stöckl.</p>
   </section>
 
   <section id="research">
@@ -212,8 +223,17 @@
     <h3>Working papers</h3>
     <ol class="pubs">
       <li>
-        <div class="ptitle">What Drives the Price of Populism? Liberal Commitments and Market Perceptions of Political Risk</div>
-        <div class="pmeta">Event study around elections combining text-based populism and liberalism measures with option-implied risk measures. Presented at the APF International Conference of Macroeconomics and Finance, Athens, July 2026.</div>
+        <details class="abstract">
+          <summary class="ptitle">How Far Apart Are the Outcomes? Party Polarization and the Election Premium in Option Prices</summary>
+          <p class="pub-description">
+            Elections are scheduled events with uncertain outcomes, and index options whose maturity spans the vote are more expensive than adjacent maturities. We ask what drives this election premium, using party positions scored from manifestos with large language models and options around 84 national elections in 22 countries. Options spanning the vote carry an average premium of 1.4 volatility points in at-the-money implied volatility and a steeper downside skew. The at-the-money premium rises with the economic distance between the two leading parties within countries: when a country&rsquo;s leading parties stand further apart than usual, one standard deviation more distance raises it by about 1.4 volatility points in our pre-specified specification with country fixed effects. Across countries the relation is fragile. The distance is not priced in the slope of the smile, and the effect does not strengthen in close races. Where betting markets price the probability of each outcome, the option-implied election jump scales with the distance between the contenders&rsquo; platforms and predicts the size of the subsequent move, including the fall of sterling after the 2016 Brexit referendum. After the vote, equity indices move more when the two leading parties stand further apart, also within countries, and they tend to rise when the more economically liberal party wins unexpectedly.
+          </p>
+          <p class="pmeta">
+            Presented at the <a href="https://apf.aueb.gr/" target="_blank" rel="noopener">APF 2026 International Conference of Macroeconomics and Finance</a>, Athens, and the
+            <a href="https://southernfinance.org/meeting" target="_blank" rel="noopener">Southern Finance Association (SFA) 2026 Annual Meeting</a>.
+          </p>
+        </details>
+        <div class="pmeta">Event study of 84 national elections in 22 countries combining LLM-scored party manifestos with option-implied risk measures. Presented at <a href="https://apf.aueb.gr/" target="_blank" rel="noopener">APF 2026</a> (Athens) and <a href="https://southernfinance.org/meeting" target="_blank" rel="noopener">SFA 2026</a>.</div>
       </li>
     </ol>
 
@@ -254,7 +274,7 @@
   <section id="education">
     <h2>Education</h2>
     <dl class="cv">
-      <dt>PhD in Business Economics, ongoing</dt>
+      <dt>PhD Economics, ongoing</dt>
       <dd>
         University of Liechtenstein<br>
         <span class="muted">Supervisor: Prof. Dr. Sebastian Stöckl</span>
