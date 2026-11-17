@@ -157,12 +157,9 @@
   details.abstract[open] summary::after { content: "Abstract ▾"; }
   details.abstract summary:hover { color: var(--accent); }
   details.abstract .pub-description { font-size: 0.93rem; line-height: 1.6; margin: 8px 0; }
-  details.abstract .pmeta { margin: 0 0 8px; }
 
-  a.conf { color: #6ea8ff; font-weight: 500; }
-  a.conf:hover { color: #9cc3ff; text-decoration: none; }
-  html[data-theme="light"] a.conf { color: #1d5fd1; }
-  html[data-theme="light"] a.conf:hover { color: #154aa6; }
+  a.conf { color: var(--link); font-weight: 600; }
+  a.conf:hover { text-decoration: none; filter: brightness(1.15); }
 
   dl.cv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; margin: 0; font-size: 0.95rem; }
   dl.cv dt { color: var(--muted); }
@@ -232,10 +229,6 @@
           <summary class="ptitle">How Far Apart Are the Outcomes? Party Polarization and the Election Premium in Option Prices</summary>
           <p class="pub-description">
             Elections are scheduled events with uncertain outcomes, and index options whose maturity spans the vote are more expensive than adjacent maturities. We ask what drives this election premium, using party positions scored from manifestos with large language models and options around 84 national elections in 22 countries. Options spanning the vote carry an average premium of 1.4 volatility points in at-the-money implied volatility and a steeper downside skew. The at-the-money premium rises with the economic distance between the two leading parties within countries: when a country&rsquo;s leading parties stand further apart than usual, one standard deviation more distance raises it by about 1.4 volatility points in our pre-specified specification with country fixed effects. Across countries the relation is fragile. The distance is not priced in the slope of the smile, and the effect does not strengthen in close races. Where betting markets price the probability of each outcome, the option-implied election jump scales with the distance between the contenders&rsquo; platforms and predicts the size of the subsequent move, including the fall of sterling after the 2016 Brexit referendum. After the vote, equity indices move more when the two leading parties stand further apart, also within countries, and they tend to rise when the more economically liberal party wins unexpectedly.
-          </p>
-          <p class="pmeta">
-            Presented at the <a class="conf" href="https://apf.aueb.gr/" target="_blank" rel="noopener">APF 2026 International Conference of Macroeconomics and Finance</a>, Athens, and the
-            <a class="conf" href="https://southernfinance.org/meeting" target="_blank" rel="noopener">Southern Finance Association (SFA) 2026 Annual Meeting</a>, Palm Springs, CA.
           </p>
         </details>
         <div class="pmeta">Presented at <a class="conf" href="https://apf.aueb.gr/" target="_blank" rel="noopener">APF 2026</a> (Athens) and <a class="conf" href="https://southernfinance.org/meeting" target="_blank" rel="noopener">SFA 2026</a> (Palm Springs).</div>
